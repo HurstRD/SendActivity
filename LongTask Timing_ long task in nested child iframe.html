@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<!-- saved from url=(0065)http://w3c-test.org/longtask-timing/longtask-in-parentiframe.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LongTask Timing: long task in nested child iframe</title>
+<style>html {    font-family:DejaVu Sans, Bitstream Vera Sans, Arial, Sans;}#log .warning,#log .warning a {  color: black;  background: yellow;}#log .error,#log .error a {  color: white;  background: red;}section#summary {    margin-bottom:1em;}table#results {    border-collapse:collapse;    table-layout:fixed;    width:100%;}table#results > thead > tr > th:first-child,table#results > tbody > tr > td:first-child {    width:8em;}table#results > thead > tr > th:last-child,table#results > thead > tr > td:last-child {    width:50%;}table#results.assertions > thead > tr > th:last-child,table#results.assertions > tbody > tr > td:last-child {    width:35%;}table#results > thead > > tr > th {    padding:0;    padding-bottom:0.5em;    border-bottom:medium solid black;}table#results > tbody > tr> td {    padding:1em;    padding-bottom:0.5em;    border-bottom:thin solid black;}.pass {    color:green;}.fail {    color:red;}tr.timeout {    color:red;}tr.notrun {    color:blue;}tr.optionalunsupported {    color:blue;}.ok {    color:green;}.error {    color:red;}.pass, .fail, .timeout, .notrun, .optionalunsupported .ok, .timeout, .error {    font-variant:small-caps;}table#results span {    display:block;}table#results span.expected {    font-family:DejaVu Sans Mono, Bitstream Vera Sans Mono, Monospace;    white-space:pre;}table#results span.actual {    font-family:DejaVu Sans Mono, Bitstream Vera Sans Mono, Monospace;    white-space:pre;}</style></head><body>
+
+<script src="./LongTask Timing_ long task in nested child iframe_files/testharness.js.download"></script>
+<script src="./LongTask Timing_ long task in nested child iframe_files/testharnessreport.js.download"></script>
+
+<script>
+  const t = async_test(t => {
+    assert_implements(window.PerformanceLongTaskTiming, 'Longtasks are not supported.');
+    window.addEventListener('message', t.step_func(e => {
+      assert_equals(e.data['entryType'], 'longtask');
+      assert_equals(e.data['frame-attribution'], 'same-origin-ancestor');
+      assert_equals(e.data['task-attribution'], 'unknown');
+      assert_equals(e.data['containerType'], 'window');
+      assert_equals(e.data['containerId'], '');
+      assert_equals(e.data['containerName'], '');
+      assert_equals(e.data['containerSrc'], '');
+      t.done();
+    }));
+  }, 'Performance longtask entries in parent are observable in child iframe.');
+
+  const iframe = document.createElement('iframe');
+  iframe.id = 'child-iframe-id';
+  iframe.name = 'child-iframe-name';
+  document.body.appendChild(iframe);
+  iframe.src = 'resources/subframe-observing-longtask.html';
+  iframe.onload = () => {
+    t.step_timeout( () => {
+      const begin = window.performance.now();
+      while (window.performance.now() < begin + 60);
+    }, 50);
+  };
+</script><iframe id="child-iframe-id" name="child-iframe-name" src="./LongTask Timing_ long task in nested child iframe_files/subframe-observing-longtask.html"></iframe>
+
+
+<div id="log"><section id="summary"><h2>Summary</h2><section><p>Harness status: <span class="ok">OK</span></p></section><p>Found 1 tests</p><div><div><label><input type="checkbox" checked="checked">1 <span class="pass">Pass</span></label></div></div></section><section><h2>Details</h2><table id="results"><thead><tr><th>Result</th><th>Test Name</th><th>Message</th></tr></thead><tbody><tr class="overall-pass"><td class="pass">Pass</td><td>Performance longtask entries in parent are observable in child iframe.</td><td> <details><summary>Asserts run</summary><table><tbody><tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_implements</strong>(function "function PerformanceLongTaskTiming() { [native code] }", "Longtasks are not supported.")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/longtask-in-parentiframe.html:11:5)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("longtask", "longtask")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/longtask-in-parentiframe.html:13:7)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("same-origin-ancestor", "same-origin-ancestor")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/longtask-in-parentiframe.html:14:7)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("unknown", "unknown")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/longtask-in-parentiframe.html:15:7)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("window", "window")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/longtask-in-parentiframe.html:16:7)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("", "")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/longtask-in-parentiframe.html:17:7)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("", "")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/longtask-in-parentiframe.html:18:7)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("", "")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/longtask-in-parentiframe.html:19:7)</pre></td></tr></tbody></table></details></td></tr></tbody></table></section></div><script type="text/json" id="__testharness__results__">{"test":"http://w3c-test.org/longtask-timing/longtask-in-parentiframe.html","tests":[{"name":"Performance longtask entries in parent are observable in child iframe.","status":0,"message":null,"stack":null}],"status":0,"message":null,"stack":null}</script></body></html>

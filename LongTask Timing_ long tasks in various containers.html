@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<!-- saved from url=(0055)http://w3c-test.org/longtask-timing/containerTypes.html -->
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>LongTask Timing: long tasks in various containers</title>
+<style>html {    font-family:DejaVu Sans, Bitstream Vera Sans, Arial, Sans;}#log .warning,#log .warning a {  color: black;  background: yellow;}#log .error,#log .error a {  color: white;  background: red;}section#summary {    margin-bottom:1em;}table#results {    border-collapse:collapse;    table-layout:fixed;    width:100%;}table#results > thead > tr > th:first-child,table#results > tbody > tr > td:first-child {    width:8em;}table#results > thead > tr > th:last-child,table#results > thead > tr > td:last-child {    width:50%;}table#results.assertions > thead > tr > th:last-child,table#results.assertions > tbody > tr > td:last-child {    width:35%;}table#results > thead > > tr > th {    padding:0;    padding-bottom:0.5em;    border-bottom:medium solid black;}table#results > tbody > tr> td {    padding:1em;    padding-bottom:0.5em;    border-bottom:thin solid black;}.pass {    color:green;}.fail {    color:red;}tr.timeout {    color:red;}tr.notrun {    color:blue;}tr.optionalunsupported {    color:blue;}.ok {    color:green;}.error {    color:red;}.pass, .fail, .timeout, .notrun, .optionalunsupported .ok, .timeout, .error {    font-variant:small-caps;}table#results span {    display:block;}table#results span.expected {    font-family:DejaVu Sans Mono, Bitstream Vera Sans Mono, Monospace;    white-space:pre;}table#results span.actual {    font-family:DejaVu Sans Mono, Bitstream Vera Sans Mono, Monospace;    white-space:pre;}</style></head><body>
+<script src="./LongTask Timing_ long tasks in various containers_files/testharness.js.download"></script>
+<script src="./LongTask Timing_ long tasks in various containers_files/testharnessreport.js.download"></script>
+<script src="./LongTask Timing_ long tasks in various containers_files/utils.js.download"></script>
+<h1>Longtasks in iframe, frame, object, and embed</h1>
+<div id="log"><section id="summary"><h2>Summary</h2><section><p>Harness status: <span class="ok">OK</span></p></section><p>Found 4 tests</p><div><div><label><input type="checkbox" checked="checked">4 <span class="pass">Pass</span></label></div></div></section><section><h2>Details</h2><table id="results"><thead><tr><th>Result</th><th>Test Name</th><th>Message</th></tr></thead><tbody><tr class="overall-pass"><td class="pass">Pass</td><td>Performance longtask entries in iframe are observable in parent.</td><td> <details><summary>Asserts run</summary><table><tbody><tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_implements</strong>(function "function PerformanceLongTaskTiming() { [native code] }", "Longtasks are not supported.")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:23:5)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(1, 1, "Exactly one entry is expected.")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:28:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("longtask", "longtask")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:31:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("longtask", "longtask")
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:2:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("same-origin-descendant", "same-origin-descendant")
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:3:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_true</strong>(true)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:4:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_greater_than_equal</strong>(60, 50)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:5:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_greater_than_equal</strong>(275.20000000298023, 0)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:6:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_less_than_equal</strong>(275.20000000298023, 339.80000000074506)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:8:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(1, 1, "Exactly one attribution entry is expected")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:38:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("taskattribution", "taskattribution")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:41:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("unknown", "unknown")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:42:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(0, 0)
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:43:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(0, 0)
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:44:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("iframe-id", "iframe-id")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:45:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("iframe-name", "iframe-name")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:46:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("resources/subframe-with-longtask.html", "resources/subframe-with-longtask.html")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:47:9)</pre></td></tr></tbody></table></details></td></tr><tr class="overall-pass"><td class="pass">Pass</td><td>Performance longtask entries in frame are observable in parent.</td><td> <details><summary>Asserts run</summary><table><tbody><tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_implements</strong>(function "function PerformanceLongTaskTiming() { [native code] }", "Longtasks are not supported.")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:23:5)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(1, 1, "Exactly one entry is expected.")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:28:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("longtask", "longtask")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:31:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("longtask", "longtask")
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:2:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("same-origin-descendant", "same-origin-descendant")
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:3:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_true</strong>(true)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:4:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_greater_than_equal</strong>(60, 50)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:5:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_greater_than_equal</strong>(464.1000000014901, 0)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:6:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_less_than_equal</strong>(464.1000000014901, 526.1000000014901)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:8:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(1, 1, "Exactly one attribution entry is expected")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:38:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("taskattribution", "taskattribution")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:41:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("unknown", "unknown")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:42:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(0, 0)
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:43:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(0, 0)
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:44:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("frame-id", "frame-id")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:45:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("frame-name", "frame-name")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:46:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("resources/subframe-with-longtask.html", "resources/subframe-with-longtask.html")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:47:9)</pre></td></tr></tbody></table></details></td></tr><tr class="overall-pass"><td class="pass">Pass</td><td>Performance longtask entries in object are observable in parent.</td><td> <details><summary>Asserts run</summary><table><tbody><tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_implements</strong>(function "function PerformanceLongTaskTiming() { [native code] }", "Longtasks are not supported.")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:23:5)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(1, 1, "Exactly one entry is expected.")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:28:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("longtask", "longtask")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:31:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("longtask", "longtask")
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:2:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("same-origin-descendant", "same-origin-descendant")
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:3:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_true</strong>(true)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:4:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_greater_than_equal</strong>(60, 50)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:5:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_greater_than_equal</strong>(678.4000000022352, 0)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:6:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_less_than_equal</strong>(678.4000000022352, 741.4000000022352)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:8:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(1, 1, "Exactly one attribution entry is expected")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:38:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("taskattribution", "taskattribution")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:41:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("unknown", "unknown")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:42:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(0, 0)
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:43:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(0, 0)
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:44:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("object-id", "object-id")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:45:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("object-name", "object-name")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:46:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("resources/subframe-with-longtask.html", "resources/subframe-with-longtask.html")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:47:9)</pre></td></tr></tbody></table></details></td></tr><tr class="overall-pass"><td class="pass">Pass</td><td>Performance longtask entries in embed are observable in parent.</td><td> <details><summary>Asserts run</summary><table><tbody><tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_implements</strong>(function "function PerformanceLongTaskTiming() { [native code] }", "Longtasks are not supported.")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:23:5)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(1, 1, "Exactly one entry is expected.")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:28:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("longtask", "longtask")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:31:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("longtask", "longtask")
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:2:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("same-origin-descendant", "same-origin-descendant")
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:3:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_true</strong>(true)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:4:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_greater_than_equal</strong>(60, 50)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:5:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_greater_than_equal</strong>(907.1000000014901, 0)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:6:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_less_than_equal</strong>(907.1000000014901, 970.4000000022352)
+    at checkLongTaskEntry ( /longtask-timing/resources/utils.js:8:3)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(1, 1, "Exactly one attribution entry is expected")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:38:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("taskattribution", "taskattribution")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:41:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("unknown", "unknown")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:42:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(0, 0)
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:43:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>(0, 0)
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:44:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("embed-id", "embed-id")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:45:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("embed-name", "embed-name")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:46:9)</pre></td></tr>
+<tr class="overall-pass"><td class="pass">Pass</td><td><pre><strong>assert_equals</strong>("resources/subframe-with-longtask.html", "resources/subframe-with-longtask.html")
+    at Test.&lt;anonymous&gt; ( /longtask-timing/containerTypes.html:47:9)</pre></td></tr></tbody></table></details></td></tr></tbody></table></section></div>
+<script>
+function Container(name, src) {
+    this.name = name;
+    this.src = src;
+}
+const Containers = [
+    new Container('iframe', 'src'),
+    new Container('frame', 'src'),
+    new Container('object', 'data'),
+    new Container('embed', 'src'),
+];
+Containers.forEach(container => {
+  promise_test(async t => {
+    assert_implements(window.PerformanceLongTaskTiming, 'Longtasks are not supported.');
+    const initialTime = performance.now();
+    return new Promise(resolve => {
+      const observer = new PerformanceObserver(t.step_func(entryList => {
+        const entries = entryList.getEntries();
+        assert_equals(entries.length, 1,
+          'Exactly one entry is expected.');
+        const longtask = entries[0];
+        assert_equals(longtask.entryType, 'longtask');
+        if (longtask.name == 'self' ||
+            longtask.name == 'multiple-contexts' ||
+            longtask.name == 'unknown')
+          return;
+        checkLongTaskEntry(longtask, 'same-origin-descendant');
+        // Assert the TaskAttributionTiming entry in attribution.
+        assert_equals(longtask.attribution.length, 1,
+          'Exactly one attribution entry is expected');
+        const attribution = longtask.attribution[0];
+        assert_equals(attribution.entryType, 'taskattribution');
+        assert_equals(attribution.name, 'unknown');
+        assert_equals(attribution.duration, 0);
+        assert_equals(attribution.startTime, 0);
+        assert_equals(attribution.containerId, container.name + '-id');
+        assert_equals(attribution.containerName, container.name + '-name');
+        assert_equals(attribution.containerSrc, 'resources/subframe-with-longtask.html');
+        observer.disconnect();
+        resolve();
+      }));
+      observer.observe({entryTypes: ['longtask']});
+      const containerObject = document.createElement(container.name);
+      containerObject.id = container.name + '-id';
+      containerObject.name = container.name + '-name';
+      containerObject[container.src] = 'resources/subframe-with-longtask.html';
+      document.body.appendChild(containerObject);
+    });
+  }, `Performance longtask entries in ${container.name} are observable in parent.`);
+});
+</script><iframe id="iframe-id" name="iframe-name" src="./LongTask Timing_ long tasks in various containers_files/subframe-with-longtask.html"></iframe>
+
+<frame id="frame-id" name="frame-name" src="./LongTask Timing_ long tasks in various containers_files/subframe-with-longtask(1).html"><object id="object-id" name="object-name" data="./LongTask Timing_ long tasks in various containers_files/subframe-with-longtask(2).html"></object><embed id="embed-id" name="embed-name" src="resources/subframe-with-longtask.html"><script type="text/json" id="__testharness__results__">{"test":"http://w3c-test.org/longtask-timing/containerTypes.html","tests":[{"name":"Performance longtask entries in iframe are observable in parent.","status":0,"message":null,"stack":null},{"name":"Performance longtask entries in frame are observable in parent.","status":0,"message":null,"stack":null},{"name":"Performance longtask entries in object are observable in parent.","status":0,"message":null,"stack":null},{"name":"Performance longtask entries in embed are observable in parent.","status":0,"message":null,"stack":null}],"status":0,"message":null,"stack":null}</script></body></html>
