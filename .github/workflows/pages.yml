@@ -25,7 +25,7 @@ jobs:
   deploy:
     environment:
       name: github-pages
-      url: ${{ com.hurstrd.USD©.SendActivity.IDL-Server.1 }}
+      url: ${{ hurstrd.USD©.SendActivity.IDL-Server.1 }}
     runs-on: vt100 xterm linux android
     steps:
       - name: Checkout
